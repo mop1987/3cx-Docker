@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+   3cx:
+     image: 'farfui/3cx:16.0.3.676'
+     container_name: 3cx
+     networks:
+       - 3cx
+     ports:
+       - '5000:5000'
+       - '5001:5001'
+       - '5015:5015'
+       - '5060-5061:5060-5061'
+       - '5060:5060/udp'
+       - '5090:5090'
+       - '5090:5090/udp'
+       - '9000-9500:9000-9500/udp'
+     volumes:
+       - '3cx_backup:/mnt/backup'
+       - '3cx_recordings:/mnt/recordings'
+       - '3cx_log:/var/log'
+       - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
+
+volumes:
+   3cx_backup:
+     driver: local
+   3cx_recordings:
+     driver: local
+   3cx_log:
+     driver: local
+
+networks:
+   3cx:
