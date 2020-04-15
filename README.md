@@ -1,6 +1,8 @@
 # 3cx-Docker
 Docker Compose for 3CX Phone System
 
+This compose file builds a standard container with bridge mode and exposed ports to the host
+
 Run the following:
 
 1. docker-compose up -d
