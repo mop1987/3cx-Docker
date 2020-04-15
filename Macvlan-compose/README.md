@@ -1,6 +1,6 @@
 In order to use macvlan driver you will need to change the vSwitch security to allow promiscuous mode.
 
-Also change the values for the following to your relevant enviroment
+Also change the values in the compose file for the following to your relevant enviroment
 
 - ipv4_address: IP
 - parent: Host eth name
