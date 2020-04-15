@@ -14,6 +14,7 @@ X.X.X.X:5015/?v=2
 
 
 You can find your timezone:  #timedatectl list-timezones 
+
 example: #docker exec 3cx timedatectl set-timezone Europe/Paris
 
   
