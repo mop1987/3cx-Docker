@@ -6,7 +6,7 @@ services:
      container_name: 3cx
      networks:
        3cx:
-        ipv4_address: 192.168.1.220
+        ipv4_address: 192.168.1.20
      volumes:
        - '3cx_backup:/mnt/backup'
        - '3cx_recordings:/mnt/recordings'
@@ -30,4 +30,4 @@ networks:
     ipam:
       config:
         - subnet: 192.168.1.0/24
-          gateway: 192.168.1.254
+          gateway: 192.168.1.1
