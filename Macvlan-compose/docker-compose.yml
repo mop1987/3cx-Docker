@@ -1,0 +1,33 @@
+version: '2'
+
+services:
+   3cx:
+     image: 'farfui/3cx:16.0.3.676'
+     container_name: 3cx
+     networks:
+       3cx:
+        ipv4_address: 192.168.1.20
+
+     volumes:
+       - '3cx_backup:/mnt/backup'
+       - '3cx_recordings:/mnt/recordings'
+       - '3cx_log:/var/log'
+       - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
+
+volumes:
+   3cx_backup:
+     driver: local
+   3cx_recordings:
+     driver: local
+   3cx_log:
+     driver: local
+
+networks:
+  3cx:
+    driver: macvlan
+    driver_opts:
+      parent: ens160
+    ipam:
+      config:
+        - subnet: 192.168.1.0/24
+          gateway: 192.168.1.1
