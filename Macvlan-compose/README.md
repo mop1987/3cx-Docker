@@ -14,4 +14,4 @@ Run the following:
 2. docker exec 3cx timedatectl set-timezone [timezone]
 3. docker exec -ti 3cx /usr/sbin/3CXWizard --cleanup
 
-Note: The web interface does not detect the Macvlan adapter so you will not be able to complete setup wizard. To get around this issue, on step 3 above you must select option 2 (CLI) to enter the ip address manually when prompted and complete the wzard from the CLI.
+Note: The web interface does not detect the Macvlan adapter so you will not be able to complete setup wizard. To get around this issue, on step 3 above you must select option 2 (CLI) to enter the ip address manually when prompted and complete the wizard from the CLI.
